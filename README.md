@@ -310,8 +310,8 @@ For other troubleshooting issues, go to [React Native Troubleshooting](https://r
 
 MIT
 
-[1]: https://github.com/react-native-linear-gradient/react-native-linear-gradient/workflows/ci/badge.svg
-[2]: https://github.com/react-native-linear-gradient/react-native-linear-gradient/actions
+[1]: https://github.com/friederbluemle/react-native-linear-gradient/workflows/ci/badge.svg
+[2]: https://github.com/friederbluemle/react-native-linear-gradient/actions
 [3]: https://img.shields.io/npm/v/react-native-linear-gradient.svg
 [4]: https://www.npmjs.com/package/react-native-linear-gradient
 [5]: https://img.shields.io/npm/dm/react-native-linear-gradient.svg
