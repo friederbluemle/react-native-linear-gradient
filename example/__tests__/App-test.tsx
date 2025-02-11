@@ -9,6 +9,11 @@ import App from '../src/App';
 // Note: test renderer must be required after react-native.
 import renderer from 'react-test-renderer';
 
+jest.mock('react-native-linear-gradient', () => {
+  return 'LinearGradient';
+});
+
 it('renders correctly', () => {
-  renderer.create(<App />);
+  const app = renderer.create(<App />);
+  app.unmount();
 });
