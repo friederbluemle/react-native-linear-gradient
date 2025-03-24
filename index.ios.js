@@ -49,6 +49,8 @@ export default class LinearGradient extends Component<Props> {
     if ((colors && locations) && (colors.length !== locations.length)) {
       console.warn('LinearGradient colors and locations props should be arrays of the same length');
     }
+    const isNewArch = global.RN$Bridgeless === true ||
+      global.nativeFabricUIManager != null;
 
     return (
       <NativeLinearGradient
@@ -56,7 +58,7 @@ export default class LinearGradient extends Component<Props> {
         {...otherProps}
         startPoint={convertPoint('start', start)}
         endPoint={convertPoint('end', end)}
-        colors={colors.map(processColor)}
+        colors={isNewArch ? colors: colors.map(processColor)}
         locations={locations ? locations.slice(0, colors.length) : null}
         useAngle={useAngle}
         angleCenter={convertPoint('angleCenter', angleCenter)}

@@ -80,24 +80,14 @@ export default class LinearGradient extends Component<Props> {
       validRadius(flatStyle.borderBottomLeftRadius),
       validRadius(flatStyle.borderBottomLeftRadius)
     ];
+    const isNewArch = global.RN$Bridgeless === true ||
+      global.nativeFabricUIManager != null;
 
     return (
       <View ref={this.gradientRef} {...otherProps} style={style}>
         <NativeLinearGradient
           style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}
-          colors={colors.map(color => {
-            console.log(color);
-            // Process the color, but ensure it's valid for the new architecture
-            const processedColor = processColor(color);
-            // React Native's new architecture has issues with negative color integers
-            // Add a debug log to help troubleshoot color issues
-            if (processedColor < 0) {
-              console.log(`LinearGradient: Converting negative color value ${processedColor} to positive`);
-              // Convert to unsigned 32-bit integer representation
-              return processedColor >>> 0;
-            }
-            return processedColor;
-          })}
+          colors={isNewArch ? colors: colors.map(processColor)}
           startPoint={convertPoint('start', start)}
           endPoint={convertPoint('end', end)}
           locations={locations ? locations.slice(0, colors.length) : null}
