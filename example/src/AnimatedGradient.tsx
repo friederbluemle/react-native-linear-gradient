@@ -22,7 +22,6 @@ const AnimatedGradient = () => {
         />
       </Pressable>
       <View style={styles.rightContainer}>
-        <Text>Tap for next color pair</Text>
         <Text>Current colors:</Text>
         <Text style={{color: colors[colorIndex][0]}}>
           {colors[colorIndex][0]}
@@ -30,6 +29,7 @@ const AnimatedGradient = () => {
         <Text style={{color: colors[colorIndex][0]}}>
           {colors[colorIndex][1]}
         </Text>
+        <Text style={styles.hintText}>Tap for next color pair</Text>
       </View>
     </View>
   );
