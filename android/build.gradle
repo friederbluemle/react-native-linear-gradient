@@ -65,6 +65,10 @@ repositories {
 }
 
 dependencies {
-    //noinspection GradleDynamicVersion
-    implementation 'com.facebook.react:react-native:+'  // From node_modules
+    if (isNewArchitectureEnabled()) {
+        implementation("com.facebook.react:react-android")
+    } else {
+        //noinspection GradleDynamicVersion
+        implementation 'com.facebook.react:react-native:+'  // From node_modules
+    }
 }
