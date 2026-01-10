@@ -17,10 +17,9 @@ jobs:
           cache: 'yarn'
           node-version: ${{ matrix.node }}
       - run: yarn --frozen-lockfile
-      - run: yarn tsc --noEmit
       - run: yarn prettier --check .
       - run: yarn lint
-      - run: yarn flow check
+      - run: yarn build
       - run: yarn react-native codegen
       - working-directory: example/
         run: |
