@@ -1,5 +1,4 @@
 import React from 'react';
-import type {PropsWithChildren} from 'react';
 import {
   ImageBackground,
   SafeAreaView,
@@ -10,12 +9,14 @@ import {
   View,
 } from 'react-native';
 
-import SimpleGradient from './SimpleGradient';
+import type {PropsWithChildren} from 'react';
+import LinearGradient from 'react-native-linear-gradient';
+
 import AngleGradient from './AngleGradient';
 import AnimatedGradient from './AnimatedGradient';
 import GradientButtons from './GradientButtons';
 import GradientTimer from './GradientTimer';
-import LinearGradient from 'react-native-linear-gradient';
+import SimpleGradient from './SimpleGradient';
 
 const pkg = require('../package.json');
 

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Pressable, Text, View} from 'react-native';
+
 import AnimatedGradientTransition from './AnimatedGradientTransition';
 import {styles} from './styles';
 

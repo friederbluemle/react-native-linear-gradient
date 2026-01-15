@@ -1,6 +1,8 @@
 import React from 'react';
 import {Alert, Platform, Pressable, StyleSheet, Text, View} from 'react-native';
+
 import LinearGradient from 'react-native-linear-gradient';
+
 import {styles} from './styles';
 
 const LinearGradientButton: React.FC<{

@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import {Animated, Easing} from 'react-native';
-import _ from 'lodash';
 
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import NativeLinearGradient from 'react-native-linear-gradient';
 
 class LinearGradient extends Component {

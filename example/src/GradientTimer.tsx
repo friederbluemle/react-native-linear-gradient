@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {AppState, Pressable, Text, View} from 'react-native';
-import {styles} from './styles';
-import LinearGradient from 'react-native-linear-gradient';
+
 import Slider from '@react-native-community/slider';
+import LinearGradient from 'react-native-linear-gradient';
+
+import {styles} from './styles';
 
 const incrementColor = (color: string, step: number) => {
   const intColor = parseInt(color.substring(1), 16);
