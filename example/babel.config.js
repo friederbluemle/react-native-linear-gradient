@@ -9,7 +9,7 @@ module.exports = {
       {
         extensions: ['.tsx', '.ts', '.js', '.json'],
         alias: {
-          [pak.name]: path.resolve(__dirname, '../index'),
+          [pak.name]: path.resolve(__dirname, '..', pak['react-native']),
         },
       },
     ],
